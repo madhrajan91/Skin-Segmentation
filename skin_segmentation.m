@@ -42,7 +42,7 @@ load('in.txt')
 disp(in)
 prob = sigmoid(in * theta);
 fprintf('predicting\n');
-disp('Format:1, R, G, B, probability_that_it_is_skin');
+disp('Format:1, B, G, R, probability_that_it_is_skin');
 disp([in prob]);
 
 
