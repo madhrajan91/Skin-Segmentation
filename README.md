@@ -12,8 +12,8 @@ This dataset is of the dimension 245057 * 4 where first three columns are B,G,R 
 
 Usage:
 run the sourcefile skin_segmentation.m using matlab or octave.
-to change the inputs/testset data modify values in in.txt. It consists of four columns where the first column is a 1 and the rest correspond to R, G and B values respectively. Once you run, after training the algorithm computes a probability between 0 and 1 which the probablity of the given pixels being a skin.
-i.e. p(y=1|r,g,b)
+to change the inputs/testset data modify values in in.txt. It consists of four columns where the first column is a 1 and the rest correspond to B, G and R values respectively. Once you run, after training the algorithm computes a probability between 0 and 1 which the probablity of the given pixels being a skin.
+i.e. p(y=1|B,G,R)
 
 Logisitic regression was used to classify the dataset.
 Training set Accuracy without regularization : 91.89
