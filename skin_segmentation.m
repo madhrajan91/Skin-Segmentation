@@ -30,12 +30,19 @@ fprintf('Cost at theta found by fminunc: %f\n', cost);
 fprintf('theta: \n');
 fprintf(' %f \n', theta);
 
-prob = sigmoid([1 152 179 223] * theta);
-fprintf(['For a skin values 152 179 223 we predict probability of %f\n\n'], prob);
 
 % Compute accuracy on our training set
 p = predict(theta, X);
 
-fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
+fprintf('Training Set Accuracy: %f\n', mean(double(p == y)) * 100);
+
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
+load('in.txt')
+disp(in)
+prob = sigmoid(in * theta);
+fprintf('predicting\n');
+disp('\t1 R G B probability_that_it_is_skin');
+disp([in prob]);
 
 
