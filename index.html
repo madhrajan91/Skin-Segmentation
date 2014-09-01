@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Skin-segmentation : Skin Segmentation using Logistic Regression.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Skin-segmentation</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/madhrajan91/Skin-Segmentation">View on GitHub</a>
+
+          <h1 id="project_title">Skin-segmentation</h1>
+          <h2 id="project_tagline">Skin Segmentation using Logistic Regression.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/madhrajan91/Skin-Segmentation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/madhrajan91/Skin-Segmentation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="skin-segmentation" class="anchor" href="#skin-segmentation"><span class="octicon octicon-link"></span></a>Skin-Segmentation</h1>
+
+<p>Skin-Segmentation using Logistic Regression. </p>
+
+<p>The examples are listed as either skin types or non-skin types
+Data Set Information:</p>
+
+<p>The skin dataset is collected by randomly sampling B,G,R values from face images of various age groups (young, middle, and old), race groups (white, black, and asian), and genders obtained from FERET database and PAL database. Total learning sample size is 245057; out of which 50859 is the skin samples and 194198 is non-skin samples. Color FERET Image Database: [Web Link], PAL Face Database from Productive Aging Laboratory, The University of Texas at Dallas: [Web Link]. </p>
+
+<p>Attribute Information:
+This dataset is of the dimension 245057 * 4 where first three columns are B,G,R (x1,x2, and x3 features) values and fourth column is of the class labels (decision variable y).</p>
+
+<p>Usage:
+run the sourcefile skin_segmentation.m using matlab or octave.
+to change the inputs/testset data modify values in in.txt. It consists of four columns where the first column is a 1 and the rest correspond to B, G and R values respectively. Once you run, after training the algorithm computes a probability between 0 and 1 which the probablity of the given pixels being a skin.
+i.e. p(y=1|B, G, R)</p>
+
+<p>Logistic regression was used to classify the dataset.
+Training set Accuracy without regularization : 91.89
+Training set Accuracy with regularization(regularization parameter lambda=0.5): 91.92</p>
+
+<p>References:
+Rajen Bhatt, Abhinav Dhall, 'Skin Segmentation Dataset', UCI Machine Learning Repository
+Machine Learning by Andrew Ng at Coursera</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Skin-segmentation maintained by <a href="https://github.com/madhrajan91">madhrajan91</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
