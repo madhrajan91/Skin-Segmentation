@@ -2,6 +2,7 @@
 load('data.txt');
 X=data(:,1:3);
 y=data(:,4);
+%Instead of 1 and 2 as our classes, we set the classes as 0 and 1
 y(y==1) = 0;
 y(y==2) = 1;
 [m, n] = size(X);
@@ -20,6 +21,7 @@ fprintf(' %f \n', grad);
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
+% Gradient using fminunc
 options = optimset('GradObj', 'on', 'MaxIter', 500);
 
 [theta, cost] = fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
@@ -29,11 +31,11 @@ fprintf('theta: \n');
 fprintf(' %f \n', theta);
 
 prob = sigmoid([1 152 179 223] * theta);
-fprintf(['For a skin values 69 80 118 we predict probability of %f\n\n'], prob);
+fprintf(['For a skin values 152 179 223 we predict probability of %f\n\n'], prob);
 
 % Compute accuracy on our training set
 p = predict(theta, X);
 
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 
-fprintf('\nProgram paused. Press enter to continue.\n');
+
