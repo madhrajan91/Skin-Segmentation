@@ -2,7 +2,8 @@
 load('data.txt');
 X=data(:,1:3);
 y=data(:,4);
-%Instead of 1 and 2 as our classes, we set the classes as 0 and 1
+%Instead of 1 and 2 as our classes, we set the classes as 0 and 1 0->skin
+%1->non skin
 y(y==1) = 0;
 y(y==2) = 1;
 [m, n] = size(X);
@@ -42,7 +43,7 @@ load('in.txt')
 disp(in)
 prob = sigmoid(in * theta);
 fprintf('predicting\n');
-disp('Format:1, B, G, R, probability_that_it_is_skin');
-disp([in prob]);
+disp('Format:1, B, G, R, probability_that_it_is_skin, probability_that_it_is_not_skin');
+disp([in (1-prob) prob]);
 
 
