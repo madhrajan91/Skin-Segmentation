@@ -10,9 +10,9 @@ y(y==2) = 1;
 X = [ones(m, 1) X];
 
 initial_theta = zeros(n + 1, 1);
-
+lambda = 0.5;
 % Compute and display initial cost and gradient
-[cost, grad] = costFunction(initial_theta, X, y);
+[cost, grad] = costFunction(initial_theta, X, y, lambda);
 
 fprintf('Cost at initial theta (zeros): %f\n', cost);
 fprintf('Gradient at initial theta (zeros): \n');
@@ -24,7 +24,7 @@ pause;
 % Gradient using fminunc
 options = optimset('GradObj', 'on', 'MaxIter', 500);
 
-[theta, cost] = fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
+[theta, cost] = fminunc(@(t)(costFunction(t, X, y, lambda)), initial_theta, options);
 
 fprintf('Cost at theta found by fminunc: %f\n', cost);
 fprintf('theta: \n');
@@ -42,7 +42,7 @@ load('in.txt')
 disp(in)
 prob = sigmoid(in * theta);
 fprintf('predicting\n');
-disp('\t1 R G B probability_that_it_is_skin');
+disp('Format:1, R, G, B, probability_that_it_is_skin');
 disp([in prob]);
 
 
