@@ -1,6 +1,6 @@
 Skin-Segmentation
 =================
-Skin-Segmentation using Logisitc Regression. 
+Skin-Segmentation using Logistic Regression. 
 
 The examples are listed as either skin types or non-skin types
 Data Set Information:
