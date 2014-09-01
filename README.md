@@ -11,7 +11,7 @@ Attribute Information:
 This dataset is of the dimension 245057 * 4 where first three columns are B,G,R (x1,x2, and x3 features) values and fourth column is of the class labels (decision variable y).
 
 Logisitic regression was used to classify the dataset.
-Training set Accuracy:91.929633
+Training set Accuracy:91.89
 
 References:
 Rajen Bhatt, Abhinav Dhall, 'Skin Segmentation Dataset', UCI Machine Learning Repository
